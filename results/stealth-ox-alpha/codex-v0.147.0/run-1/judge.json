@@ -1,0 +1,33 @@
+{
+  "judge_model": "openai/gpt-5.6-luna",
+  "judged_at": "2026-08-24T21:54:25+00:00",
+  "verdict": {
+    "off_by_one": {
+      "in_thinking": true,
+      "in_output": true
+    },
+    "negative_index": {
+      "in_thinking": true,
+      "in_output": true
+    },
+    "hypotheses_explored": [
+      "off-by-one upper bound",
+      "unchecked negative index",
+      "NULL table",
+      "negative len",
+      "signed overflow in comparison",
+      "pointer arithmetic undefined behavior",
+      "caller contract guarantees"
+    ],
+    "self_corrections": [
+      "table null not checked if len perhaps >? Contract matters.",
+      "Static internal maybe caller guarantees but function unsafe."
+    ],
+    "drops_function_words": true,
+    "thinking_output_relation": "draft",
+    "register": "telegraphic",
+    "register_evidence": "Also negative idx unchecked -> OOB before buffer.",
+    "false_claims": [],
+    "notes": "Both planted bugs are visibly discovered in the thinking and correctly reported in the final output."
+  }
+}

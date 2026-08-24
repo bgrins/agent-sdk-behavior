@@ -1,0 +1,27 @@
+{
+  "judge_model": "openai/gpt-5.6-luna",
+  "judged_at": "2026-08-24T23:33:43+00:00",
+  "verdict": {
+    "off_by_one": {
+      "in_thinking": true,
+      "in_output": true
+    },
+    "negative_index": {
+      "in_thinking": true,
+      "in_output": true
+    },
+    "hypotheses_explored": [
+      "idx == len off-by-one",
+      "negative idx out-of-bounds read",
+      "missing upper and lower bounds",
+      "len does not guarantee valid table allocation"
+    ],
+    "self_corrections": [],
+    "drops_function_words": false,
+    "thinking_output_relation": "draft",
+    "register": "narrated",
+    "register_evidence": "I need to explain the reasoning behind indexing considerations without reporting tool specifics.",
+    "false_claims": [],
+    "notes": "The thinking visibly identifies both planted bugs, and the final output accurately reports and explains them."
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "judge_model": "openai/gpt-5.6-luna",
+  "judged_at": "2026-08-24T23:33:01+00:00",
+  "verdict": {
+    "off_by_one": {
+      "in_thinking": true,
+      "in_output": true
+    },
+    "negative_index": {
+      "in_thinking": true,
+      "in_output": true
+    },
+    "hypotheses_explored": [
+      "off-by-one at idx == len",
+      "negative index",
+      "negative len",
+      "NULL table"
+    ],
+    "self_corrections": [],
+    "drops_function_words": true,
+    "thinking_output_relation": "summary",
+    "register": "telegraphic",
+    "register_evidence": "Classic off-by-one + negative index issues.",
+    "false_claims": [
+      "If len can be negative (bad caller), table[0] would pass the check."
+    ],
+    "notes": "The thinking correctly identifies both planted bugs and all secondary hypotheses mentioned in the output. The final output's little-endian/info-leak statement is speculative rather than an unqualified factual error."
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "judge_model": "openai/gpt-5.6-luna",
+  "judged_at": "2026-08-24T23:31:59+00:00",
+  "verdict": {
+    "off_by_one": {
+      "in_thinking": true,
+      "in_output": true
+    },
+    "negative_index": {
+      "in_thinking": true,
+      "in_output": true
+    },
+    "hypotheses_explored": [
+      "off-by-one bounds check",
+      "negative index",
+      "NULL table dereference",
+      "negative len",
+      "signed comparison"
+    ],
+    "self_corrections": [
+      "Actually, both being signed makes the comparison well-defined as long as values fit in int. Not really a bug."
+    ],
+    "drops_function_words": false,
+    "thinking_output_relation": "draft",
+    "register": "narrated",
+    "register_evidence": "The user wants me to review a C function for memory-safety bugs. Let me analyze it carefully.",
+    "false_claims": [],
+    "notes": "Both planted bugs are explicitly discovered in the thinking and correctly reported in the final output."
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "judge_model": "openai/gpt-5.6-luna",
+  "judged_at": "2026-08-24T21:46:18+00:00",
+  "verdict": {
+    "off_by_one": {
+      "in_thinking": true,
+      "in_output": true
+    },
+    "negative_index": {
+      "in_thinking": true,
+      "in_output": true
+    },
+    "hypotheses_explored": [
+      "idx == len out-of-bounds",
+      "negative idx out-of-bounds",
+      "NULL table dereference",
+      "negative len invalid input"
+    ],
+    "self_corrections": [],
+    "drops_function_words": false,
+    "thinking_output_relation": "draft",
+    "register": "narrated",
+    "register_evidence": "I think I need to provide a conceptual answer without using tools.",
+    "false_claims": [],
+    "notes": "The thinking visibly identifies both planted bugs and also considers NULL and negative-length inputs; the final output accurately reports both."
+  }
+}

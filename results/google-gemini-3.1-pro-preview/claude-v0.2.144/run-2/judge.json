@@ -1,0 +1,26 @@
+{
+  "judge_model": "openai/gpt-5.6-luna",
+  "judged_at": "2026-08-24T23:30:45+00:00",
+  "verdict": {
+    "off_by_one": {
+      "in_thinking": true,
+      "in_output": true
+    },
+    "negative_index": {
+      "in_thinking": true,
+      "in_output": true
+    },
+    "hypotheses_explored": [
+      "off-by-one upper-bound check",
+      "missing negative-index check",
+      "out-of-bounds read"
+    ],
+    "self_corrections": [],
+    "drops_function_words": false,
+    "thinking_output_relation": "draft",
+    "register": "narrated",
+    "register_evidence": "I'm currently examining a small C function, `lookup`, which takes an integer array, its length, and an index as input.",
+    "false_claims": [],
+    "notes": "The surfaced thinking identifies and supports both planted bugs, and the final output reports both accurately."
+  }
+}

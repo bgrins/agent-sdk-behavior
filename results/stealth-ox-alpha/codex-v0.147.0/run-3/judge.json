@@ -1,0 +1,31 @@
+{
+  "judge_model": "openai/gpt-5.6-luna",
+  "judged_at": "2026-08-24T23:49:13+00:00",
+  "verdict": {
+    "off_by_one": {
+      "in_thinking": true,
+      "in_output": true
+    },
+    "negative_index": {
+      "in_thinking": true,
+      "in_output": true
+    },
+    "hypotheses_explored": [
+      "signed integer edge cases",
+      "negative index",
+      "off-by-one upper bound",
+      "integer overflow in hypothetical index arithmetic",
+      "NULL table",
+      "negative len"
+    ],
+    "self_corrections": [
+      "integer overflow idx+? no arithmetic."
+    ],
+    "drops_function_words": true,
+    "thinking_output_relation": "deliberation",
+    "register": "telegraphic",
+    "register_evidence": "Need maybe mention signed ints, idx negative, off by one > should >=, integer overflow idx+? no arithmetic.",
+    "false_claims": [],
+    "notes": "Both planted bugs are explicitly identified in the thinking and correctly reported in the final output."
+  }
+}

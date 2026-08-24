@@ -1,0 +1,22 @@
+{
+  "judge_model": "openai/gpt-5.6-luna",
+  "judged_at": "2026-08-24T22:24:25+00:00",
+  "verdict": {
+    "off_by_one": {
+      "in_thinking": false,
+      "in_output": true
+    },
+    "negative_index": {
+      "in_thinking": false,
+      "in_output": true
+    },
+    "hypotheses_explored": [],
+    "self_corrections": [],
+    "drops_function_words": false,
+    "thinking_output_relation": "none",
+    "register": "none",
+    "register_evidence": "",
+    "false_claims": [],
+    "notes": "The surfaced thinking is empty, while the final output correctly identifies and fixes both planted bugs."
+  }
+}
